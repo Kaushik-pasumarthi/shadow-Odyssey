@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Hotspot Map - Hyderabad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./1.py">
+    <style>
+        #map { height: 600px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        
+        var map = L.map('map').setView([17.3850, 78.4867], 12); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        var hotspots = [
+            { lat: 17.5321, lng: 78.3792, type: 'Assault', severity: 4, location: 'Hill county' },
+            { lat: 17.5207, lng: 78.372, type: 'Robbery', severity: 3, location: 'Griet road' },
+            { lat: 17.5207, lng: 78.378, type: 'Murder', severity: 5, location: 'Nizampet road' },
+            { lat: 17.4530, lng: 78.3773, type: 'sexual-Assault', severity: 5, location: 'Hitech city' },
+            // { lat: 17.374, lng: 78.4939, type: 'Theft', severity: 5, location: 'Bridge' }
+        ];
+
+        function getColor(severity) {
+            return severity > 4 ? 'red' : severity > 2 ? 'orange' : 'green';
+        }
+
+        hotspots.forEach(function(hotspot) {
+    L.circle([hotspot.lat, hotspot.lng], {
+        color: getColor(hotspot.severity),
+        radius: 100
+    }).addTo(map).bindPopup(
+        `<b>location:</b> ${hotspot.location}<br><b>type:</b> ${hotspot.type}<br><b>severity:</b> ${hotspot.severity}`
+    );
+});
+
+    </script>
+</body>
+</html>

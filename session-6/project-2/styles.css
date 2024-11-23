@@ -1,0 +1,17 @@
+table{
+  width: 800px;
+  text-align: center;
+  margin: auto;
+  background-color: aqua;
+}
+thead{
+  background-color: rgb(95, 138, 172);
+}
+table,th,td{
+  border: 2px solid black ;
+  border-collapse: collapse;
+  padding: 15px 10px;
+}
+tr:hover{
+  background-color: red;
+}

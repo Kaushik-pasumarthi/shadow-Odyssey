@@ -1,0 +1,46 @@
+body{
+  background-color: rgb(241, 238, 232);
+}
+img{
+  float: left;
+  padding:30px;
+  padding-left: 90px;
+  padding-right: 5px;
+  width: 200px;
+  padding-bottom: 10px;
+}
+h1{
+  padding-left: 90px;
+  text-transform: capitalize;
+  text-decoration: solid;
+  font-size: 40px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+;
+}
+p{
+  padding-top: 27px;
+  padding-bottom: 100px;
+}
+span{
+  color: brown; 
+}
+div{
+  padding-left:  80px; ;
+}
+hr{
+  text-align: center;
+  width: 90%;
+}
+h2{
+  padding-left: 90px;
+  text-transform: capitalize;
+  text-decoration: solid;
+  font-size: 33px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+a{
+  color: red;
+}
+.rr{
+  padding-left: 90px;
+}

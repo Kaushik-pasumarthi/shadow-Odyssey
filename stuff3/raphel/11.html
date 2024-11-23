@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsup</title>
+    <link rel="stylesheet" href="./11.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="div_bg">
+    
+    </div>
+      <canvas id="c"></canvas>
+  </div>
+  <script>
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+  var txts = "こんにちは、私はカウシク・パシュマルティです。初めまして。ヤスヌヴァヴィッチ";
+  txts = txts.split("");
+  var font_size = 15;
+  var columns = c.width / font_size;
+  var drops = [];
+  for (var x = 0; x < columns; x++) drops[x] = 1;
+  
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.fillStyle = "#490";
+    ctx.font = font_size + "px arial";
+    for (var i = 0; i < drops.length; i++) {
+      var text = txts[Math.floor(Math.random() * txts.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+      if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 20);
+  </script>
+
+    <header class="header">
+        <a href="#home" class="logo">THE
+        <span>RAPHEL</span></a>
+        
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">about</a>
+            <a href="#skills">skills</a>
+            <a href="#contact">contact</a>
+
+        </nav>    
+
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Yoo, its's <span>Raphhh here</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p>I Love to explore or should i say experiment 
+                every field that exists in this world and try my best to become a versatile learner.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/raphel-pamedipaga-75251228b/
+                "><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/raphelp"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.instagram.com/raphel_.p/"><i class='bx bxl-instagram' ></i></a>
+                <a href=""><i class='bx bxl-reddit' ></i></a>
+            </div>   
+            <div class="btn-group">
+                <a href="#" class="btn">Hire</a>
+                <a href="#contact" class="btn">Contact</a>
+                </div>  
+             </div>
+             <div class="home-img">
+                <img src="https://duckduckgo.com/?q=osaka+pic+azumanga+diah&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fcdn.wallpapersafari.com%2F32%2F85%2FAoqxuU.png" alt="">
+             </div>
+    </section>
+   <div class="about">
+    <h1>
+        ABOUT
+    </h1>
+
+   </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script SRC="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <link rel="stylesheet" href="./min.js">
+</head>
+<body>
+  <div class="div_bg">
+    
+  </div>
+    <canvas id="c"></canvas>
+</div>
+<script>
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+var txts = "こんにちは、私はカウシク・パシュマルティです。初めまして。ヤスヌヴァヴィッチ";
+txts = txts.split("");
+var font_size = 22;
+var columns = c.width / font_size;
+var drops = [];
+for (var x = 0; x < columns; x++) drops[x] = 1;
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, c.width, c.height);
+  ctx.fillStyle = "#490";
+  ctx.font = font_size + "px arial";
+  for (var i = 0; i < drops.length; i++) {
+    var text = txts[Math.floor(Math.random() * txts.length)];
+    ctx.fillText(text, i * font_size, drops[i] * font_size);
+    if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+    drops[i]++;
+  }
+}
+setInterval(draw, 20);
+</script>
+    <header class="header">
+      <a href="#" class="logo"><img src="https://mcdn.wallpapersafari.com/medium/32/85/AoqxuU.png" alt=""></a>
+      
+      <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#stufff">About</a>
+        <a href="#Skills">Skills</a>  
+        <a href="#LetsConnect">Contact</a>
+      </nav>
+
+    </header>
+    <section class="Home" id="Home">
+      
+      <div class="video-container">
+        <iframe class="video-background" src="https://www.youtube.com/embed/PjNhXlREeSc?autoplay=1&loop=1&playlist=PjNhXlREeSc&mute=1&playsinline=1&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+        <h1>Kaushik Pasumarthi
+        <p>Eager to explore the vast universe of AI and its limitless possibilities.
+          <div class="home-sci">
+            <a href="https://www.instagram.com/kaushikpasumarthi/?hl=en"><i class='bx bxl-instagram' ></i></a>
+            <a href="https://www.linkedin.com/in/kaushik-pasumarthi-019504293/"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Kaushik-pasumarthi"><i class='bx bxl-github' ></i></a>
+            <a href="#"><i class='bx bxl-discord' ></i></a>
+          
+          </div>
+        </p>
+      </h1>
+    </section>
+    <div class="heading-wrap" ></div>
+        <div class="marquee">
+            <div class="marquee-content scroll">
+                <div class="text-block-4" id="stufff">LETS BUILD together.</div>
+            </div>
+            <div class="marquee-content scroll">
+                <div class="text-block-4">LETS BUILD TOGETHER.</div>
+            </div>
+        </div>
+    <section class="about" id="about">
+      <div class="about-container">
+        <p class="intro">Hey there, I'm the CS Major<br/> College Student juggling AI,<br/> WebDev, and a whole lot of<br/> awesomeness!</p>
+        <p class="two">When I'm not cracking the code, you'll find me diving deep<br/> into the world of Artificial Intelligence and crafting cutting-<br/>edge websites.<br/><br/>I'm excited to connect with like-minded professionals who<br/> share my passion for coding and technology.</p>
+      </div>
+    </section>
+    <section class="stuffing" id="Skills">
+      <div class="container1">
+        <h2 class="heading1">Technical Skills</h2>
+        <div class="Technical-bars">
+          <div class="bar"><i style="color: #c95d2e" class='bx bxl-html5'></i>
+            <div class="info">
+              <span>HTML</span>
+            </div>
+            <div class="progress-line html">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar"><i style="color: #147bbc" class='bx bxl-css3'></i>
+            <div class="info">
+              <span>CSS</span>
+            </div>
+            <div class="progress-line css">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar"><i style="color: #c32ec9" class='bx bxl-python'></i>
+            <div class="info">
+              <span>Python</span>
+            </div>
+            <div class="progress-line python">
+              <span></span>
+            </div>
+          </div>
+          <div class="bar"><i style="color: #69bcbc" class='bx bxl-c-plus-plus'></i>
+            <div class="info">
+              <span>C Language</span>
+            </div>
+            <div class="progress-line c-Language">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container1">
+        <h2 class="heading1">Professional Skills</h2>
+        <div class="radial-bars">
+          <div class="radial-bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="Progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">90%</div>
+            <div class="text">Creativity</div>
+          </div>
+          <div class="radial-bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="Progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">88%</div>
+            <div class="text">Communication</div>
+          </div>
+          <div class="radial-bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="Progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">80%</div>
+            <div class="text">Problem Solving</div>
+          </div>
+          <div class="radial-bar">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="Progress-bar" cx="100" cy="100" r="80"></circle>
+              <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="percentage">90%</div>
+            <div class="text">Team Work</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="LetsConnect">
+      <div class="connect-container">
+        <h2>Ready to Dive In? </br>Let's Connect! </h2>
+        <p>Join me on this tech adventure. Click below!</p>
+      <div class="trump">
+        <button class="home-sci">
+          <a href="https://www.instagram.com/kaushikpasumarthi/?hl=en"><i class='bx bxl-instagram' ></i></a>
+          <a href="https://www.linkedin.com/in/kaushik-pasumarthi-019504293/"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://github.com/Kaushik-pasumarthi"><i class='bx bxl-github' ></i></a>
+          <a href="#"><i class='bx bxl-discord' ></i></a>
+        
+        </button>
+      </div>
+      </div>
+    </section>
+</body>
+
+
+</html>

@@ -1,0 +1,11 @@
+img{
+  float:left;
+}
+
+.stuff0{
+  float: right;
+}
+.stuff1{
+  display:block;
+  margin: auto;
+}

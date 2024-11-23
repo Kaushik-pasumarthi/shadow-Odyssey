@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Pacifico", cursive;
+}
+header{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg);
+  background-color: blue;
+  padding: 170px 25px;
+  color: white;
+  background-blend-mode:luminosity ;
+}
+header p{
+  color:orange;
+}
+main{
+  margin: 20px 100px;
+}
+ div{
+  margin-bottom: 50px;
+  
+}
+h2{
+  margin-bottom: 20px;
+}
+footer{
+  padding: 80px 0px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}

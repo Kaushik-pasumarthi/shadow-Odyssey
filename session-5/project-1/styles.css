@@ -1,0 +1,11 @@
+:root{
+  --heading-color:blue;
+  --bg-color:lightblue;
+}
+h1{
+  text-align: center;
+  font-size: 70px;
+  color: var(--heading-color);
+  background-color: var(--bg-color);
+
+}

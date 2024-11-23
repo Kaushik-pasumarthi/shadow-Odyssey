@@ -1,0 +1,20 @@
+body{
+
+  background-color: rgb(63, 103, 212);
+}
+a{
+  text-decoration-line: none;
+    color: white;
+}
+li{
+  color: white;
+}
+h1{
+  color: white ;
+}
+div.rel{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

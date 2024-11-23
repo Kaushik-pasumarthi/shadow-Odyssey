@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: weight;
+font-style: normal;
+}
+nav{
+  display: flex;
+  text-transform: capitalize;
+  justify-content: space-between;
+}
+nav ul{
+  display: flex;
+  margin-left: 500px;
+  justify-content: left;
+}
+nav h3{
+  padding-top: 10px;
+}
+li{
+   margin: 20px; 
+  margin-right: 30px;
+  list-style-type: none;
+  color: deepskyblue;
+}
+h3{
+   color: darkblue;
+   margin-left: 20px;
+   margin-top: 10px;
+}
+.main{
+  margin:auto ;
+  background-color: deepskyblue;
+  text-align: center;
+ 
+}
+.parent{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+p{
+  width: 300px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+#abc{
+  color: white;
+}
+h2{
+  color: darkblue;
+}
+#imga{
+  margin-top: 10px;
+}
+.child{
+  margin-bottom: 20px;
+}
+#city{
+  display: float;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+.para{
+  margin-left: 450px ;
+  margin-bottom: 10pxpx;
+  color: white;
+  width: 500px;
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 768px) {
+  navulli {
+      display: block;
+      margin: 10px0;
+  }
+
+  .parent {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .child {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .mainh2 {
+      font-size: 1.5em;
+  }
+
+  .para {
+      font-size: 1em;
+  }
+  nav ul{
+    margin-left: 10px;
+  }
+}

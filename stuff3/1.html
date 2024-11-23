@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8"/>
+    <!-- multi-device width -->
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <!-- site description -->
+    
+    <meta content="Just random bunch of notes." name="description"/>
+    <!-- referer for 3rd-part images-->
+    <meta content="no-referrer" name="referrer"/>
+    <!-- title -->
+    <title>
+        
+            
+        
+    </title>
+    <!-- icon -->
+    <link href="https://cyksagar.tech/src/assets/img/favicon.ico" rel="shortcut icon bookmark" type="image/x-icon"/>
+    <!-- global stylesheet -->
+    <link rel="stylesheet" href="https://cyksagar.tech/src/assets/css/main.css" type="text/css"/>
+    <!-- fa 5.9.0 -->
+    <link rel="stylesheet" href="https://cyksagar.tech/src/assets/css/fa.min.css" type="text/css"/>
+    <!-- global script -->
+    <script src="https://cyksagar.tech/src/assets/js/main.js" async></script>
+    <!-- mathjax 2.7.5 -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- mermaid 8.11.5-->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.11.5/mermaid.min.js"></script>
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Site | Just random bunch of notes.</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Site" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Just random bunch of notes." />
+<meta property="og:description" content="Just random bunch of notes." />
+<link rel="canonical" href="https://cyksagar.tech/" />
+<meta property="og:url" content="https://cyksagar.tech/" />
+<meta property="og:site_name" content="Site" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Site" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Just random bunch of notes.","headline":"Site","name":"Site","url":"https://cyksagar.tech/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title>CYK</title>
+    <meta name="description" content="cyk's site">
+    
+    <!-- You could also inline the stylesheet -->
+  <link rel="stylesheet" href="https://cyksagar.tech/src/assets/css/home.css" type="text/css"/>
+
+    <!-- special font for special quotes-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&family=Marck+Script&family=Rye&display=swap"> -->
+
+    <!-- Twemoji Font Support -->
+    <!-- <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script> -->
+    
+  </head>
+  
+  <body class="page">
+    <!-- background animations -->
+<div class="div_bg">
+    <canvas id="c"></canvas>
+</div>
+<script>
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+c.height = window.innerHeight;
+c.width = window.innerWidth;
+var txts = "こんにちは、私はカウシク・パシュマルティです。初めまして。ヤスヌヴァヴィッチ";
+txts = txts.split("");
+var font_size = 22;
+var columns = c.width / font_size;
+var drops = [];
+for (var x = 0; x < columns; x++) drops[x] = 1;
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, c.width, c.height);
+  ctx.fillStyle = "#490";
+  ctx.font = font_size + "px arial";
+  for (var i = 0; i < drops.length; i++) {
+    var text = txts[Math.floor(Math.random() * txts.length)];
+    ctx.fillText(text, i * font_size, drops[i] * font_size);
+    if (drops[i] * font_size > c.height || Math.random() > 0.98) drops[i] = 0;
+    drops[i]++;
+  }
+}
+setInterval(draw, 20);
+</script>
+    <!-- collection list, shown by click "archive" buttom in header -->
+<div class="collection_list_container"  id="the_collection_list">
+<div class="collection_list_background"  onclick="close_collection_list()"></div>
+<div class="collection_list" onload="none">
+    <div class="collection_list_header">
+        <!-- TODO: search post -->
+                                            <!-- <a class="search_btn">
+      <i class="fa fa-search"> Search</i>
+    </a>
+    &nbsp; -->
+        <table class="collection_list_header_title">
+            <tr>
+                <td>Archive:</td>
+                <td id="clh_title"></td>
+            </tr>
+        </table>
+        <div class="close_btn" onclick="close_collection_list()">
+            <a class="close_btn_icon">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="collection_name_list">
+        <table class="vertical_center_table">
+            <tr>
+                <td>
+                    <ul>
+                        <!-- show all collections -->
+                        <li>
+                            <a class="a_collection_label" onclick="show_collection('all')">All
+                            </a>
+                        </li>
+                        <!-- show a simple collection -->
+                        
+                            
+                                
+                                    
+                                
+                                    
+                                
+                            
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('posts')">
+                                                
+                                                    posts
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                            
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_collection_label" onclick="show_collection('rust')">
+                                                
+                                                    Rust
+                                                
+                                            </a>
+                                        </li>
+                                    
+                                
+                            
+                                
+                                    
+                                
+                                    
+                                
+                            
+                        
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="posts_by_cate">
+        <!-- post list in all collections -->
+        <div class="post_list_in_1_collection" id="all">
+            <table class="vertical_center_table">
+                <tr>
+                    <td>
+                        <ul>
+                            
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    posts
+                                                
+                                            </p>
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="https://cyksagar.tech/zeheroctf/">Things learnt in zh3r0</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="https://cyksagar.tech/binexp_intro/">Binexp_intro</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                        
+                                    
+                                
+                                    
+                                        
+                                    
+                                        
+                                            <p class="h_collection_label">
+                                                
+                                                    Rust
+                                                
+                                            </p>
+                                            
+                                                
+                                                    <li>
+                                                        <a class="a_title" href="https://cyksagar.tech/rust/rs/">Vector methods</a>
+                                                    </li>
+                                                
+                                            
+                                            <br/>
+                                        
+                                    
+                                
+                                    
+                                        
+                                    
+                                        
+                                    
+                                
+                            
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- post list in a collection -->
+        
+            <div class="post_list_in_1_collection" id="posts">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="https://cyksagar.tech/zeheroctf/">Things learnt in zh3r0</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="https://cyksagar.tech/binexp_intro/">Binexp_intro</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+            <div class="post_list_in_1_collection" id="rust">
+                <table class="vertical_center_table">
+                    <tr>
+                        <td>
+                            <ul>
+                                
+                                    
+                                        <li>
+                                            <a class="a_title" href="https://cyksagar.tech/rust/rs/">Vector methods</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        
+    </div>
+</div>
+</div>
+    <div class="container" id="ctner">
+       <div class="header">
+  <table class="vertical_center_table">
+    <tr>
+      <td>
+        <nav class="nav_bar">
+          <ul>
+            <!-- left header -->
+            <li class="li_left">
+              <!-- open collection tree -->
+              
+              <a class="header_btn" onclick="open_collection_list()">
+                <i class="fa btn_icon fa-bars">
+                  
+                  <p class="btn_text">Archives</p>
+                  
+                </i>
+              </a>
+              
+              <!-- home -->
+              
+              <a class="header_btn" href="https://cyksagar.tech">
+                <i class="fa btn_icon fa-home">
+                  
+                  <p class="btn_text">Home</p>
+                  
+                </i>
+              </a>
+              
+              <!-- maximize -->
+              
+              <a class="header_btn" id="mxmz_btn" onclick="toggle_maximize()">
+                <i class="fa btn_icon fa-window-maximize">
+                  
+                  <p class="btn_text" id="mxmz_text">Maximize</p>
+                  
+                </i>
+              </a>
+              
+              <!-- access token -->
+              
+            </li>
+            <!-- right header -->
+            <span class="span_right">
+              
+              <a class="site_title" href="https://cyksagar.tech"
+                >Site</a
+              >
+              
+              <a class="site_owner"> - </a>
+              <a class="site_owner" href="https://github.com/95ych">
+                95ych</a
+              >
+               
+            </span>
+          </ul>
+        </nav>
+        <!-- <hr /> -->
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- table of content -->
+
+<!-- toggle maximize -->
+
+<script>
+  var ctner_state = 0;
+  var ctner = document.getElementById("ctner");
+</script>
+
+<!-- encrypt and decrypt -->
+
+
+  <div class="div_article" id="div_atcl">
+
+
+        
+    <article
+          id="main_atcl"
+          itemscope
+          itemtype="http://schema.org/BlogPosting"
+    >
+
+    <aticle1>
+	  <aside >
+              <img style="border: 1px solid var(--highlight)" loading="lazy" alt="lee" src="https://cyksagar.tech/src/assets/img/lee.gif" width="250" height="250">
+	  </aside>
+          <aticle  >
+	      <h4 style="color:var(--highlight)">Hi there!</h4>  
+	      <code> This is C Y K Sagar. </code> 
+	      
+	      <h4 style="color:var(--highlight)" font-family="Twemoji">Linux is <3 </h4>
+	      <code>Artix | dwm | fish | neovim </code>
+	      
+	      <h4 style="color:var(--highlight)"> Likes.. </h4>
+	      <code> Rust | CTFs | Movies <br></code>
+	      
+	      <!-- <h4 style="color:var(--highlight)"> Activity: </h4> -->
+	      <!-- <div><img style="float:left" src="https://wakatime.com/share/@95ych/98a5758b-d7e4-4edb-9ed9-35361b1e420b.png" /></div> -->
+	      <!-- <figure id="activity"  ><embed src="https://wakatime.com/share/@95ych/bcc309ab-065c-4f91-965a-c7d422331984.svg"></embed></figure> -->
+	      
+	     
+          </aticle>
+
+	  <!-- <aside style="border:0px solid var(--greencolor); position: relative" > -->
+	  <!--   <special-quote> -->
+	  <!--     ❝If you believe in your dreams, I will prove to you that you can achieve your dreams just by working hard.❞ -- Rock Lee -->
+	  <!--   </special-quote> -->
+	  <!-- </aside> -->
+
+	  <!-- <p style="color:var(--highlight)"> ---------- </p> -->
+
+	  <!-- <aticle style = "top:10px;position:relative"> -->
+	  <!--   <div> -->
+	  <!--   <p> VISITS </p> -->
+	  <!--  <script type="text/javascript" src="//counter.websiteout.net/js/8/10/1/1"></script> -->
+	  <!--   <script> -->
+	  <!--   	document.getElementsByTagName("img")[2].style.marginLeft = 0  -->
+	  <!--   </script> -->
+	  <!--    -->
+	  <!--   </div> -->
+			<!---->
+	  <!-- </aticle> -->
+            <center style="top:80px;position:relative;">
+              <p>
+                    <a href="https://landchad.net/" target="_blank" ><img class="btn"  src="https://cyksagar.tech/src/assets/img/landchad.gif"target="_blank" alt="https:&#x2F;&#x2F;landchad.net"></a>
+
+                       <a href="https://sadgrl.online/learn/" target="_blank" ><img class="btn" src="https://cyksagar.tech/src/assets/img/learn.gif" target="_blank" alt="https:&#x2F;&#x2F;sadgrl.online&#x2F;learn&#x2F;"></a>
+
+                    <a href="https://www.gnu.org/gnu/linux-and-gnu.en.html" target="_blank" ><img class = "btn" src="https://cyksagar.tech/src/assets/img/made_on_gnu_linux.png" target="_blank" alt="gnu-linux"></a>
+
+
+                    <a href="https://neovim.io/" target="_blank" ><img class="btn" src="https://cyksagar.tech/src/assets/img/vim.gif" target="_blank" alt="neovim"></a>
+                    
+                 
+                    
+                </p>    
+            </center>
+            <footer>
+	    <div style="top:100px" class="footer">
+  <nav class="nav_bar">
+    <ul class="footer_owner_info">
+      <!-- email -->
+      
+      <a class="footer_btn" href="mailto://cyksagar@pm.me">
+        <i class="fa fa-envelope-square">
+          
+          <p>Email</p>
+          
+        </i>
+      </a>
+      
+      <!-- linkedin -->
+      
+      <!-- github -->
+      
+      <a class="footer_btn" href="https://github.com/95ych">
+        <i class="fa fa-github">
+          
+          <p>Github</p>
+          
+        </i>
+      </a>
+      
+            <!-- RSS -->
+      <a class="footer_btn" href="https://cyksagar.tech/feed.xml">
+        <i class="fa fa-rss">
+          
+          <p>RSS</p>
+          
+        </i>
+      </a>
+      </ul>
+  </nav>
+
+                           
+</div>
+            </footer>
+
+          </aticle1>
+        </article>
+
+
+  
+      </div>
+      </div>
+
+    
+ </body>
+</html>
+

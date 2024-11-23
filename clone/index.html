@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Swiggy Clone</h1>
+    </header>
+
+    <section id="restaurants">
+        <h2>Restaurants</h2>
+        <div id="restaurant-list">
+        </div>
+    </section>
+
+    <section id="menu" class="hidden">
+        <button id="back-to-restaurants">Back to Restaurants</button>
+        <h2 id="restaurant-name"></h2>
+        <div id="menu-list">
+        </div>
+        <button id="view-cart">View Cart</button>
+    </section>
+
+    <section id="cart" class="hidden">
+        <button id="back-to-menu">Back to Menu</button>
+        <h2>Cart</h2>
+        <div id="cart-items">
+        </div>
+        <h3>Total: $<span id="total-price">0.00</span></h3>
+        <button id="place-order">Place Order</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

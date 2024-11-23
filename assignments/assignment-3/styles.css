@@ -1,0 +1,18 @@
+body{
+  background-color: rgb(238, 233, 227);
+}
+img{
+  display: block;
+  margin: auto;
+}
+h1{
+  text-align: center;
+}
+h2{
+  color: brown;  
+}
+div{ 
+  padding-left: 377px;
+  container: 1px;
+  text-align: left;
+}
